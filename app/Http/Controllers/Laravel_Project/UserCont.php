@@ -28,7 +28,7 @@ class UserCont extends Controller
         }
 
     function categories(){
-         $categori=Category::withCount('quizzes')->orderBy('quizzes_count', 'desc')->paginate(2);
+         $categori=Category::withCount('quizzes')->orderBy('quizzes_count', 'desc')->paginate(5);
         return view('01_Laravel_Project.categories-list',['categories'=>$categori]);
     }
 
